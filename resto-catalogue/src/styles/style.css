@@ -1,0 +1,321 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #dde6ed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 380px;
+  width: 100%;
+  text-align: center;
+  background-position: center;
+}
+
+.hero__inner,
+.best-inner {
+  margin: 0 auto;
+  min-height: 60px;
+  max-width: 800px;
+}
+
+.container h2 {
+  font-size: 50px;
+  width: 100%;
+  color: #526d82;
+  text-shadow: 0.5px 0.8px #dde6ed;
+  font-style: bold;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  text-align: center;
+  color: #dde6ed;
+  font-weight: 700;
+  width: 100%;
+  padding-bottom: 10%;
+}
+
+button {
+    min-width: 44px;
+    min-height: 44px;
+    padding-top: 1px;
+    display: inline-block;
+}
+
+.check {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid #dde6ed;
+  color: #dde6ed;
+  text-decoration: none;
+  font-size: 1em;
+  border-radius: 20px;
+  background-color: #526d82;
+  box-sizing: border-box;
+  min-width: 44px;
+  min-height: 44px;
+  font-family: 'Noto Serif', serif;
+}
+
+.skip-link {
+  min-width: 44px;
+  min-height: 44px;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+  cursor: pointer;
+}
+
+/*
+  AppBar
+*/
+
+.app-bar {
+  padding: 8px 16px;
+  background-color:  #526d82;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__brand h1 {
+  color: #dde6ed;
+  text-transform: uppercase;
+  font-size: 22px;
+  user-select: none;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: #526d82;
+  overflow: hidden;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-block;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+  background-color: #dde6ed;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+#hamburgerButton{color: #dde6ed;}
+
+/*
+  Main Content
+*/
+
+main {
+  padding: 32px;
+  flex: 1;
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content .content__heading {
+  font-weight: normal;
+  color:#526d82;
+  text-align: center;
+}
+
+
+/*
+  Restos
+*/
+
+.restos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/*
+  Resto Item
+*/
+
+.resto-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #526d82;
+}
+
+.resto-item__header {
+  position: relative;
+}
+
+.resto-item .resto-item__header .resto-item__header__poster {
+  width: 100%;
+}
+
+.resto-item .resto-item__header .resto-item__header__rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: black;
+  color: #dde6ed;
+}
+
+.resto-item .resto-item__header .resto-item__header__rating .resto-item__header__rating__score {
+  margin-left: 10px;
+  color: #dde6ed;
+}
+
+.resto-item .resto-item__content {
+  padding: 16px;
+}
+
+.resto-item .resto-item__content h3 {
+  margin: 0 0 10px 0;
+}
+
+.resto-item .resto-item__content h3 a {
+  color: #dde6ed;
+  text-decoration: none;
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-block;
+}
+
+.resto-item .resto-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; 
+  -webkit-box-orient: vertical;
+  color: #dde6ed;
+}
+
+/*
+  Resto
+*/
+
+.resto {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+
+.resto .resto__poster {
+  width: 100%;
+  max-width: 400px;
+}
+
+.resto .resto__info h4 {
+  margin: 8px 0;
+}
+
+
+/*
+  Footer
+*/
+
+footer {
+  padding: 16px;
+  background-color: #526d82;
+}
+
+footer p {
+  text-align: center;
+  color: #dde6ed;
+}
+
+footer p a {
+  color: #526d82;
+  text-decoration: none;
+}
+
+/*
+   Like
+*/
+
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #526d82;
+  color: #dde6ed;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
